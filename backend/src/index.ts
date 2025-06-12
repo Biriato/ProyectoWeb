@@ -9,7 +9,7 @@ const app = express();
 
 // Habilita CORS para permitir peticiones desde el frontend
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: true,
   credentials: true, 
 }));
 
@@ -18,5 +18,5 @@ app.use('/auth', userRoutes);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`Servidor corriendo en http://localhost:${PORT}`);
+  console.log(`Servidor corriendo en ${PORT}`);
 });
