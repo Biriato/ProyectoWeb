@@ -9,7 +9,7 @@ const app = express();
 
 // Habilita CORS para permitir peticiones desde el frontend
 app.use(cors({
-  origin: true,
+  origin: "https://cheerful-naiad-7ab82c.netlify.app",
   credentials: true, 
 }));
 
