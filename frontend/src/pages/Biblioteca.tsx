@@ -35,7 +35,7 @@ export default function Biblioteca() {
   useEffect(() => {
     async function fetchGenres() {
       try {
-        const response = await axios.get('http://localhost:3000/auth/appuser/series/genres');
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/auth/appuser/series/genres`);
         setAllGenres(response.data.genres);
       } catch (error) {
         console.error('Error cargando géneros', error);
