@@ -108,6 +108,7 @@ router.post('/', async (req: Request, res: Response) => {
 
         res.status(201).json(newUser);
     } catch (error: unknown) {
+        console.error('ERROR DETECTADO EN /auth:', error);
         if (error instanceof z.ZodError) {
             res.status(400).json({
                 errors: error.errors.map(e => ({
