@@ -1,5 +1,5 @@
 import express, { Request, Response } from 'express';
-import { PrismaClient, Prisma, Status } from '../generated/prisma/client';
+import { PrismaClient, Prisma, Status } from "@prisma/client";
 import type { SignOptions } from 'jsonwebtoken';
 import { z } from 'zod';
 import bcrypt from 'bcrypt';
