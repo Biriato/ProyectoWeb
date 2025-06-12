@@ -1,0 +1,72 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  user
+  admin
+}
+
+model User {
+  id       Int    @id @default(autoincrement())
+  name     String
+  email    String @unique
+  password String
+  role     Role   @default(user)
+  list     List?  
+  createdAt DateTime @default(now())
+}
+
+model List {
+  id        Int          @id @default(autoincrement())
+  user      User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId    Int          @unique
+  series    ListSeries[]
+  createdAt DateTime     @default(now())
+}
+
+model Series {
+  id            Int           @id @default(autoincrement())
+  title         String
+  description   String?
+  genre         String?
+  year          Int?
+  imageUrl      String?
+  episodes      Int?
+  status        String?
+  startedAt     DateTime?
+  endedAt       DateTime?
+  studio        String?
+  source        String?
+  genres        String[]
+  averageScore  Float?
+  lists         ListSeries[]
+}
+enum Status {
+  POR_VER
+  MIRANDO
+  VISTA
+}
+model ListSeries {
+  id             Int      @id @default(autoincrement())
+  listId         Int
+  seriesId       Int
+  status         Status   @default(POR_VER)
+  rating         Int?
+  startedAt      DateTime?
+  endedAt        DateTime?
+  currentEpisode Int?     // Episodio por el que va
+
+  list           List     @relation(fields: [listId], references: [id], onDelete: Cascade)
+  series         Series   @relation(fields: [seriesId], references: [id], onDelete: Cascade)
+
+  @@unique([listId, seriesId])
+}
+
+
