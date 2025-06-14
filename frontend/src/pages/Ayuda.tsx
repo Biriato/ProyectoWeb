@@ -2,7 +2,7 @@ import React from "react";
 
 const AyudaUsuario: React.FC = () => {
   return (
-    <div className="max-w-5xl mx-auto py-10 px-4 text-gray-800">
+    <div className="max-w-5xl mx-auto py-10 px-4 text-gray-800 bg-white min-h-[calc(100vh-4rem)]">
       <h1 className="text-3xl font-bold mb-6 text-center">Centro de Ayuda - Trackd</h1>
 
       {/* Sección 1: Registro */}
