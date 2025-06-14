@@ -7,7 +7,7 @@ interface Props {
     onSerieCreated: () => void;
     token: string;
 }
-
+//Modal para condirmar la creacion  de una serie
 export default function CreateSerieModal({ isOpen, onClose, onSerieCreated, token }: Props) {
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');

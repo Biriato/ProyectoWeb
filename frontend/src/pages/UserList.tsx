@@ -18,7 +18,7 @@ interface Serie {
   releaseDate?: string;
   imageUrl?: string;
 }
-
+//Funcion solo para administradores que muestra la lista de los usuarios registrados
 export default function UserList() {
   const { token } = useAuth();
   const [series, setSeries] = useState<Serie[]>([]);

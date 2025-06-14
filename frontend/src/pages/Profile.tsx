@@ -13,7 +13,7 @@ interface User {
 }
 
 const API_URL = import.meta.env.VITE_API_URL;
-
+//Funcion para ver y editar los datos del usuario 
 export default function Perfil() {
   const { logout, token } = useAuth();
   const [user, setUser] = useState<User | null>(null);

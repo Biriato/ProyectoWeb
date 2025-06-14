@@ -14,7 +14,7 @@ interface Serie {
   year: number;
   status: string;
 }
-
+//Funcion que recupera del backend todas las series de forma paginada y las muestra
 export default function Biblioteca() {
   const [series, setSeries] = useState<Serie[]>([]);
   const [page, setPage] = useState(1);

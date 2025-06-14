@@ -3,7 +3,7 @@ interface DeleteModalProps {
     onCancel: () => void;
     onConfirm: () => void;
   }
-  
+  //Modal para condirmar la eliminacion de una serie de la lista del usuario
   export default function DeleteModal({ title, onCancel, onConfirm }: DeleteModalProps) {
     return (
       <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50">

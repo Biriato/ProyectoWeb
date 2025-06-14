@@ -5,7 +5,7 @@ interface Props {
     onConfirm: () => void;
     title: string;
   }
-  
+  //Modal para condirmar la eliminacion de una serie
   export default function ConfirmDeleteSerieModal({ isOpen, onClose, onConfirm, title }: Props) {
     if (!isOpen) return null;
   

@@ -16,7 +16,7 @@ import AdminSeriesList from './pages/AdminSeries';
 import AvisoLegal from './pages/AvisoLegal';
 import PoliticaPrivacidad from './pages/PoliticaPrivacidad';
 import AyudaUsuario from './pages/Ayuda';
-
+//Todas las rutas de la pagina 
 export default function App() {
   return (
     <Routes>

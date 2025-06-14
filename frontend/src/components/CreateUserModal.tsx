@@ -8,7 +8,7 @@ interface Props {
   onUserCreated: () => void;
   token: string;
 }
-
+//Modal para condirmar la creacion de un usuario
 export default function CreateUserModal({ isOpen, onClose, onUserCreated, token }: Props) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');

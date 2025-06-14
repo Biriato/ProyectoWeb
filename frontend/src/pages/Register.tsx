@@ -3,7 +3,7 @@ import { register } from '../services/auth';
 import { useNavigate, Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import PageTitle from '../components/PageTitle';
-
+//funcion para el registro de un usuario nuevo 
 export default function Register() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');

@@ -13,7 +13,7 @@ interface Props {
   token: string;
   onUserUpdated: () => void;
 }
-
+//Modal para editar un usuario
 export default function EditUserModal({ isOpen, onClose, user, token, onUserUpdated }: Props) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');

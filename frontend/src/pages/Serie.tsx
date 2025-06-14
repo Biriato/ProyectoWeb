@@ -23,7 +23,7 @@ interface Serie {
     genres: string[];
     averageScore: number | null;
 }
-
+//Pagina especificada de cada serie en la que se cargan todos sus datos 
 export default function SerieDetalle() {
     const { id } = useParams<{ id: string }>();
     const [serie, setSerie] = useState<Serie | null>(null);

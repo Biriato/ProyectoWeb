@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import { useAuth } from '../services/Autenticate';
 import { Mail, Menu, X } from 'lucide-react';
-
+//Layout principal de la pagina compuesto por los 3 tipos de usuario 
 export default function MainLayout() {
   const { user, logout } = useAuth();
   const [isMenuOpen, setIsMenuOpen] = useState(false);

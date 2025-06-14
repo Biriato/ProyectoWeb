@@ -5,7 +5,7 @@ interface Props {
   onConfirm: () => void;
   userName: string;
 }
-
+//Modal para condirmar la eliminacion de un usuario
 export default function ConfirmDeleteModal({ isOpen, onClose, onConfirm, userName }: Props) {
   if (!isOpen) return null;
 

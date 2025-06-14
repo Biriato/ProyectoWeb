@@ -24,7 +24,7 @@ interface Props {
   token: string;
   serie: Serie;
 }
-
+//Modal para editar de una serie
 export default function EditSerieModal({ isOpen, onClose, onSerieUpdated, token, serie }: Props) {
   const [title, setTitle] = useState(serie.title);
   const [description, setDescription] = useState(serie.description);

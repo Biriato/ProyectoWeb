@@ -18,7 +18,7 @@ const router = express.Router();
 const prisma = new PrismaClient();
 const storage = multer.memoryStorage();
 const upload = multer({ storage });
-
+//Esquemas que siguen todos los endpoints con validaciones en Zod
 const createUserSchema = z.object({
     name: z.string().min(1, "El nombre es obligatorio"),
     email: z.string().email("Email inválido"),

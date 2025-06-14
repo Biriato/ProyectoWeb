@@ -22,7 +22,7 @@ interface Serie {
     studio: string;
     source: string;
 }
-
+//Funcion para la administracion de series solo para admins 
 export default function AdminSeriesList() {
     const { token } = useAuth();
     const [series, setSeries] = useState<Serie[]>([]);

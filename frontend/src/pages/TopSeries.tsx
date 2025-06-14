@@ -26,7 +26,7 @@ interface ApiResponse {
 }
 
 const SERIES_PER_PAGE = 15;
-
+//Funcion que recupera de manera ordenada las series por nota media de los usuarios
 export default function TopSeries() {
   const { user, token } = useAuth(); // Aquí obtienes user y token
   const [series, setSeries] = useState<Serie[]>([]);

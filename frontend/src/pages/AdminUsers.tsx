@@ -14,7 +14,7 @@ interface User {
     role: string;
     createdAt: string;
 }
-
+//Funcion para la administracion de usuarios solo para admins 
 export default function AdminUserList() {
     const { token } = useAuth();
     const [users, setUsers] = useState<User[]>([]);
