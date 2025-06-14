@@ -13,6 +13,9 @@ import TopSeries from './pages/TopSeries';
 import AdminRoute from './components/AdminRoute';
 import AdminUserList from './pages/AdminUsers';
 import AdminSeriesList from './pages/AdminSeries';
+import AvisoLegal from './pages/AvisoLegal';
+import PoliticaPrivacidad from './pages/PoliticaPrivacidad';
+import AyudaUsuario from './pages/Ayuda';
 
 export default function App() {
   return (
@@ -26,6 +29,9 @@ export default function App() {
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
 
+        <Route path="/aviso-legal" element={<AvisoLegal />} />
+        <Route path="/politica-privacidad" element={<PoliticaPrivacidad />} />
+        <Route path="/ayuda" element={<AyudaUsuario />} />
         {/* Rutas protegidas */}
         <Route
           path="perfil"

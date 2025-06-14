@@ -99,8 +99,17 @@ export default function MainLayout() {
         <Outlet />
       </main>
       <footer className="bg-gray-800 text-gray-400 p-4 text-sm mt-auto">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0">
-          <p>&copy; 2025 <span className="text-white font-semibold">Trackd</span>. Todos los derechos reservados.</p>
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0">
+        <p>
+          &copy; 2025 <span className="text-white font-semibold">Trackd</span>. Todos los derechos reservados.
+        </p>
+
+        <div className="flex flex-col md:flex-row items-center gap-4">
+          <div className="flex gap-4">
+            <Link to="/aviso-legal" className="hover:text-white transition">Aviso Legal</Link>
+            <Link to="/politica-privacidad" className="hover:text-white transition">Privacidad</Link>
+            <Link to="/ayuda" className="hover:text-white transition">Ayuda</Link>
+          </div>
 
           <a
             href="mailto:alejandrovg980@gmail.com"
@@ -110,7 +119,8 @@ export default function MainLayout() {
             alejandrovg980@gmail.com
           </a>
         </div>
-      </footer>
+      </div>
+    </footer>
     </div>
   );
 }
