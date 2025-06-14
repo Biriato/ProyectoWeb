@@ -124,7 +124,7 @@ export default function AdminSeriesList() {
                 <select value={filterStatus} onChange={e => setFilterStatus(e.target.value)} className="px-3 py-1 bg-gray-700 rounded">
                     <option value="">Todos los estados</option>
                     <option value="Finalizada">Finalizada</option>
-                    <option value="En Emisión">En Emisión</option>
+                    <option value="En emisión">En emisión</option>
                 </select>
 
                 <button onClick={() => setPage(1)} className="bg-blue-600 hover:bg-blue-700 px-3 py-1 rounded">Aplicar</button>
