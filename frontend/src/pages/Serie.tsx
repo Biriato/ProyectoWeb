@@ -73,9 +73,11 @@ export default function SerieDetalle() {
         const today = new Date().toISOString().split('T')[0];
 
         if (status !== 'POR_VER') {
-            errors.startedAt = 'La fecha de inicio es obligatoria.';
-        } else if (startedAt > today) {
-            errors.startedAt = 'La fecha de inicio no puede ser en el futuro.';
+            if (!startedAt) {
+                errors.startedAt = 'La fecha de inicio es obligatoria.';
+            } else if (startedAt > today) {
+                errors.startedAt = 'La fecha de inicio no puede ser en el futuro.';
+            }
         }
 
         if (status === 'VISTA') {
